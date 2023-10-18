@@ -1,0 +1,89 @@
+{
+    "Specials": [
+      {
+        "Title": "The House",
+        "Genre": "Stop motion / dark comedy",
+        "Premiere": "January 14, 2022",
+        "Runtime": "1 h 37 min",
+        "Language": "English"
+      },
+      {
+        "Title": "Behind the Scenes with Jane Campion",
+        "Genre": "Making-of",
+        "Premiere": "January 27, 2022",
+        "Runtime": "17 min",
+        "Language": "English"
+      },
+      {
+        "Title": "Erax",
+        "Genre": "Fantasy",
+        "Premiere": "February 17, 2022",
+        "Runtime": "15 min",
+        "Language": "English"
+      },
+      {
+        "Title": "Forgive Us Our Trespasses",
+        "Genre": "Drama",
+        "Premiere": "February 17, 2022",
+        "Runtime": "14 min",
+        "Language": "English"
+      }
+    ],
+    "Feature": [
+      {
+        "Title": "A Not So Merry Christmas",
+        "Genre": "Comedy",
+        "Premiere": "December 20, 2022",
+        "Runtime": "1 h 40 min",
+        "Language": "Spanish"
+      },
+      {
+        "Title": "Glass Onion: A Knives Out Mystery",
+        "Genre": "Murder mystery",
+        "Premiere": "December 23, 2022",
+        "Runtime": "2 h 19 min",
+        "Language": "English"
+      },
+      {
+        "Title": "A Night at the Kindergarten",
+        "Genre": "Black comedy",
+        "Premiere": "December 28, 2022",
+        "Runtime": "1 h 37 min",
+        "Language": "Polish"
+      },
+      {
+        "Title": "White Noise",
+        "Genre": "Black comedy",
+        "Premiere": "December 30, 2022",
+        "Runtime": "2 h 16 min",
+        "Language": "English"
+      }
+    ],
+    "Dokumentaries": [
+      {
+        "Title": "In Broad Daylight: The Narvarte Case",
+        "Premiere": "December 8, 2022",
+        "Runtime": "1 h 48 min",
+        "Language": "Spanish"
+      },
+      {
+        "Title": "The Elephant Whisperers",
+        "Premiere": "December 8, 2022",
+        "Runtime": "41 min",
+        "Language": "Tamil"
+      },
+      {
+        "Title": "Kangaroo Valley",
+        "Premiere": "December 14, 2022",
+        "Runtime": "1 h 16 min",
+        "Language": "English"
+      },
+      {
+        "Title": "The Volcano: Rescue from Whakaari",
+        "Premiere": "December 16, 2022",
+        "Runtime": "1 h 38 min",
+        "Language": "English"
+      } 
+    ]
+  }
+  
