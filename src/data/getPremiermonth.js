@@ -1,10 +1,8 @@
 import data from "./movieFlex.json";
-// import React from "react";
-// import { Bar } from "react-chartjs-2";
-
 
 export function getPremieremonth() {
-  const premiereMonths = {
+  const categories = ["Specials", "Feature", "Dokumentaries"];
+  const months = {
     January: 0,
     February: 0,
     March: 0,
@@ -19,47 +17,30 @@ export function getPremieremonth() {
     December: 0,
   };
 
-  // Count the premieres for each month
-  data.Specials.forEach((movie) => {
-    const premiereMonth = new Date(movie.Premiere).getMonth();
-    premiereMonths[Object.keys(premiereMonths)[premiereMonth]]++;
+  // Loop through each category
+  categories.forEach((category) => {
+    data[category].forEach((movie) => {
+      const premiereMonth = new Date(movie.Premiere).getMonth();
+      months[Object.keys(months)[premiereMonth]]++;
+    });
   });
 
-  data.Feature.forEach((movie) => {
-    const premiereMonth = new Date(movie.Premiere).getMonth();
-    premiereMonths[Object.keys(premiereMonths)[premiereMonth]]++;
-  });
+  const categoryColors = {
+    Specials: "rgba(255, 99, 132, 0.8)",
+    Feature: "rgba(54, 162, 235, 0.8)",
+    Dokumentaries: "rgba(255, 206, 86, 0.8)",
+  };
 
-  data.Dokumentaries.forEach((movie) => {
-    const premiereMonth = new Date(movie.Premiere).getMonth();
-    premiereMonths[Object.keys(premiereMonths)[premiereMonth]]++;
-  });
 
-  const labels = Object.keys(premiereMonths);
-  const counts = Object.values(premiereMonths);
-
+  const labels = Object.keys(months);
+  const datasets = categories.map((category) => ({
+    label: category,
+    data: labels.map((month) => months[month]),
+    backgroundColor: categoryColors[category], // Använd specifik färg för varje kategori
+    
+  }));
   return {
     labels,
-    datasets: [
-      {
-        label: "Premiere Month Counts",
-        data: counts,
-        backgroundColor: [
-          "rgba(255, 99, 132, 0.8)",
-          "rgba(54, 162, 235, 0.8)",
-          "rgba(255, 206, 86, 0.8)",
-          "rgba(75, 192, 192, 0.8)",
-          "rgba(153, 102, 255, 0.8)",
-          "rgba(255, 159, 64, 0.8)",
-          "rgba(51, 204, 51, 0.8)",
-          "rgba(255, 102, 102, 0.8)",
-          "rgba(102, 102, 255, 0.8)",
-          "rgba(204, 51, 255, 0.8)",
-          "rgba(255, 153, 51, 0.8)",
-          "rgba(80, 80, 80, 0.8)",
-        ],
-      },
-    ],
+    datasets,
   };
-  return data;
 }
