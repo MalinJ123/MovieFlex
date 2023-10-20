@@ -15,3 +15,6 @@ const Specialmovies = () => {
 };
 
 export default Specialmovies;
+
+
+

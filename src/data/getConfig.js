@@ -5,7 +5,9 @@ console.log("Getting all movies", data);
 export function getConfig(sortOrder) {
   // Kontrollera att data innehåller de nödvändiga kategorierna
   if (!data.Specials || !data.Feature || !data.Dokumentaries) {
-    throw new Error("Invalid data structure. Make sure it contains Specials, Feature, and Dokumentaries.");
+    throw new Error(
+      "Invalid data structure. Make sure it contains Specials, Feature, and Dokumentaries."
+    );
   }
 
   const languageCounts = {
@@ -72,8 +74,9 @@ export function getConfig(sortOrder) {
           "rgba(0, 255, 128, 0.8)",
           "rgba(128, 128, 0, 0.8)",
           "rgba(128, 0, 0, 0.8)",
-        ], borderColor: "rgba(0, 0, 0, 0.5)"
-      }
+        ],
+        borderColor: "rgba(0, 0, 0, 0.5)",
+      },
     ],
   };
 }
