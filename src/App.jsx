@@ -7,10 +7,10 @@ function App() {
   return (
     <>
       <h1>MovieFlex </h1>
-      <h2>charts</h2>
-      <Specialmovies />
       <h2>Premiere month</h2>
       <Premieremonth />
+      <h2>charts</h2>
+      <Specialmovies />
     </>
   );
 }
