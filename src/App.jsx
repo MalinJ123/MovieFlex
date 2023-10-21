@@ -1,10 +1,10 @@
+import React from "react";
 import "./App.css";
 import Specialmovies from "./components/Specialmovies";
 import Premieremonth from "./components/Premieremonth";
-import React from "react";
 import MovieLength from "./components/length";
 import Genre from "./components/Genre";
-import Search from "./components/Search";
+import Search from "./components/Search.jsx";
 
 function App() {
   return (
@@ -13,14 +13,14 @@ function App() {
       <h3>Search</h3>
       <Search />
 
-      <h3>Genre</h3>
-      <Genre />
-      <h2>Movie lenght </h2>
-      <MovieLength />
-      <h2>Premiere month</h2>
-      <Premieremonth />
-      <h2>charts</h2>
-      <Specialmovies />
+      {/* <h3>Genre</h3> */}
+      {/* <Genre /> */}
+      {/* <h2>Movie lenght </h2> */}
+      {/* <MovieLength /> */}
+      {/* <h2>Premiere month</h2> */}
+      {/* <Premieremonth /> */}
+      {/* <h2>charts</h2> */}
+      {/* <Specialmovies /> */}
     </>
   );
 }

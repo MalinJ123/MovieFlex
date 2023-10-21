@@ -1,13 +1,33 @@
+import React, { useState } from "react";
+import data from "../data/movieFlex";
+import "../stylesheet/search.css";
 
-import React, { useState } from 'react';
+// Omstrukturera data till en array av kategorier
+const categories = Object.values(data);
 
-const Search = ({ onSearch }) => {
-  const [searchTerm, setSearchTerm] = useState('');
+function Search() {
+  const [searchTerm, setSearchTerm] = useState("");
+  const [searchResult, setSearchResult] = useState([]);
 
   const handleSearchChange = (e) => {
     const newSearchTerm = e.target.value;
     setSearchTerm(newSearchTerm);
-    onSearch(newSearchTerm);
+
+    const lowercaseSearchTerm = newSearchTerm.toLowerCase();
+
+    // Filtrera filmer baserat på söktermen i alla kategorier
+    const filteredMovies = [];
+
+    categories.forEach((category) => {
+      const matchingMovies = category.filter((movie) => {
+        const lowercaseTitle = movie.Title.toLowerCase();
+        return lowercaseTitle.includes(lowercaseSearchTerm);
+      });
+
+      filteredMovies.push(...matchingMovies);
+    });
+
+    setSearchResult(filteredMovies);
   };
 
   return (
@@ -19,8 +39,21 @@ const Search = ({ onSearch }) => {
         value={searchTerm}
         onChange={handleSearchChange}
       />
+
+      {searchTerm.trim() === "" ? (
+        <p>No results</p>
+      ) : (
+        searchResult.map((movie, index) => (
+          <div key={index} className="movie-card">
+            <h2>{movie.Title}</h2>
+            <p>Genre: {movie.Genre}</p>
+            <p>Runtime: {movie.Runtime}</p>
+            <p>Language: {movie.Language}</p>
+          </div>
+        ))
+      )}
     </div>
   );
-};
+}
 
 export default Search;
