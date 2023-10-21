@@ -5,13 +5,16 @@ import Premieremonth from "./components/Premieremonth";
 import MovieLength from "./components/length";
 import Genre from "./components/Genre";
 import Search from "./components/Search.jsx";
+import Start from './routes/start'
 
 function App() {
   return (
     <>
-      <h1>MovieFlex </h1>
-      <h3>Search</h3>
-      <Search />
+    
+      <Start/>
+
+      {/* <h3>Search</h3> */}
+      {/* <Search /> */}
 
       {/* <h3>Genre</h3> */}
       {/* <Genre /> */}
