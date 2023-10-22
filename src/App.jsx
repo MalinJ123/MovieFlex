@@ -8,72 +8,65 @@ import Search from "./components/Search.jsx";
 import Start from "./routes/start";
 
 function App() {
+  const [isGenreVisible, setIsGenreVisible] = useState(false);
+  const [isLengthVisible, setIsLengthVisible] = useState(false);
+  const [isPremiereVisible, setIsPremiereVisible] = useState(false);
+  const [isSpecialVisible, setIsSpecialVisible] = useState(false);
 
- // State variable to track whether the diagram is currently displayed
- const [isDiagramVisible, setIsDiagramVisible] = useState(false);
- // State variable to track which diagram to display
- const [selectedDiagram, setSelectedDiagram] = useState(null);
+  const toggleGenre = () => {
+    setIsGenreVisible(!isGenreVisible);
+  };
+  const toggleLength = () => {
+    setIsLengthVisible(!isLengthVisible);
+  };
+  const togglePremiere = () => {
+    setIsPremiereVisible(!isPremiereVisible);
+  };
+  const toggleSpecial = () => {
+    setIsSpecialVisible(!isSpecialVisible);
+  };
 
- // Function to toggle the display of the diagram when a button is clicked
- const toggleDiagram = (diagramName) => {
-   if (isDiagramVisible) {
-     // If the diagram is already visible, hide it
-     setIsDiagramVisible(false);
-     setSelectedDiagram(null); // Clear the selected diagram
-   } else {
-     // If the diagram is hidden, show it
-     setIsDiagramVisible(true);
-     setSelectedDiagram(diagramName);
-   }
- };
-  
+  const closeGenre = () => {
+    setIsGenreVisible(false);
+  };
+  const closeLength = () => {
+    setIsLengthVisible(false);
+  };
+  const closePremiere = () => {
+    setIsPremiereVisible(false);
+  };
+  const closeSpecial= () => {
+    setIsSpecialVisible(false)
+  }
+
   return (
-    <>
+    <section>
       <Start />
-
-      {/* <h3>Search</h3> */}
       {/* <Search /> */}
+      <section className="btn-container">
+        <button className="genre-btn" onClick={toggleGenre}>
+          Show Genre Chart
+        </button>
+        {isGenreVisible && <Genre onClose={closeGenre} />}
 
-      {/* <section className="chart">
-      </section> */}
-       <section className="btn-container">
+        <button className="length-btn" onClick={toggleLength}>
+          Show Length Chart
+        </button>
+        {isLengthVisible && <MovieLength onClose={closeLength} />}
 
-       <button className="genre-btn" onClick={() => toggleDiagram('genre')}>
-        {selectedDiagram === 'genre' && isDiagramVisible
-          ? 'Hide Genre Diagram'
-          : 'Show Genre Diagram'}
-      </button>
+        <button className="premiere-btn" onClick={togglePremiere}>
+          Show Premiere Chart
+        </button>
+        {isPremiereVisible && <Premieremonth onClose={closePremiere} />}
 
-      <button className="length-btn" onClick={() => toggleDiagram('length')}>
-        {selectedDiagram === 'length' && isDiagramVisible
-          ? 'Hide Movie Length Diagram'
-          : 'Show Movie Length Diagram'}
-      </button>
+        <button className="special-btn" onClick={toggleSpecial}>
+          Show Special Chart
+        </button>
+        {isSpecialVisible && <Specialmovies onClose={closeSpecial} />}
 
-      <button className="premiere-btn" onClick={() => toggleDiagram('premiere')}>
-        {selectedDiagram === 'premiere' && isDiagramVisible
-          ? 'Hide Premiere Month Diagram'
-          : 'Show Premiere Month Diagram'}
-      </button>
-
-      <button className="special-btn" onClick={() => toggleDiagram('special')}>
-        {selectedDiagram === 'special' && isDiagramVisible
-          ? 'Hide Special Movies Diagram'
-          : 'Show Special Movies Diagram'}
-      </button>
-
-       </section>
-      {isDiagramVisible && (
-        <>
-          {selectedDiagram === 'genre' && <Genre />}
-          {selectedDiagram === 'length' && <MovieLength />}
-          {selectedDiagram === 'premiere' && <Premieremonth />}
-          {selectedDiagram === 'special' && <Specialmovies />}
-        </>
-      )}
-    </>
+      </section>
+    </section>
   );
 }
-
 
 export default App;

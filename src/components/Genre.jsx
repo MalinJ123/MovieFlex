@@ -1,23 +1,41 @@
-
-import { Chart as ChartJS, ArcElement, Tooltip, Legend, CategoryScale, LinearScale, BarElement} from "chart.js";
-ChartJS.register(ArcElement, Tooltip, Legend, CategoryScale, LinearScale, BarElement )
+import {
+  Chart as ChartJS,
+  ArcElement,
+  Tooltip,
+  Legend,
+  CategoryScale,
+  LinearScale,
+  BarElement,
+} from "chart.js";
+ChartJS.register(
+  ArcElement,
+  Tooltip,
+  Legend,
+  CategoryScale,
+  LinearScale,
+  BarElement
+);
 import React from "react";
-import { Pie} from "react-chartjs-2";
+import { Pie } from "react-chartjs-2";
 
-import { getGenre } from './../data/genre';
+import { getGenre } from "./../data/genre";
 
 
-const Genre = () => { 
+  const Genre = ({ onClose }) => {
+    const genreConfig = getGenre();
+  
 
-    const genreConfig = getGenre ()
-
-    return(
-        <section>
-      <p>Shows Genre</p>
-      <Pie data={genreConfig} />
-    </section>
-    )
-
-}
+  return (
+    <div className="overlay">
+      <div className="chart-container">
+      <button className="close-button" onClick={onClose}>
+          &times; 
+        </button>
+        <p>Shows Genre</p>
+        <Pie data={genreConfig} />
+      </div>
+    </div>
+  );
+};
 
 export default Genre;
