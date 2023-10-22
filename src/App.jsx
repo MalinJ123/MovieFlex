@@ -14,7 +14,7 @@ function App() {
       <Start/>
 
       {/* <h3>Search</h3> */}
-      {/* <Search /> */}
+      <Search />
 
       {/* <h3>Genre</h3> */}
       {/* <Genre /> */}
