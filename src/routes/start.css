@@ -9,23 +9,19 @@
   background-position: center;
   height: 50vh;
 }
-
+.ad {
+  color: rgb(255, 255, 255);
+  opacity: 0;
+ 
+}
 .advertisment {
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
   position: relative;
+}
 
-  /* opacity: 0;
-  animation: slide-in 2s ease-in-out forwards;
-  transform: translateX(-50%); */
-}
-.ad {
-  color: rgb(255, 255, 255);
-  opacity: 0;
- 
-}
 .movieflex {
   font-family: "Shadows Into Light", cursive;
   font-size: 30px;
@@ -38,7 +34,15 @@
   animation: movieflex 4s ease-in-out;
   cursor: pointer;
   /* border: 2px solid black; */
+  /* max-width: 5em; */
 }
+
+@keyframes movieflex {
+  0% {
+    transform: translate(0, 0) rotate(360deg) scale(1.2);
+  }
+}
+
 .new {
   font-family: "Nosifer", sans-serif;
   font-size: 50px;
@@ -79,11 +83,6 @@
   100% {
     opacity: 1;
     transform: translateX(0);
-  }
-}
-@keyframes movieflex {
-  0% {
-    transform: translate(0, 0) rotate(360deg) scale(1.2);
   }
 }
 

@@ -42,7 +42,7 @@ function App() {
   return (
     <section>
       <Start />
-      {/* <Search /> */}
+     
       <section className="btn-container">
         <button className="genre-btn" onClick={toggleGenre}>
           Show Genre Chart
@@ -60,11 +60,12 @@ function App() {
         {isPremiereVisible && <Premieremonth onClose={closePremiere} />}
 
         <button className="special-btn" onClick={toggleSpecial}>
-          Show Special Chart
+          Show Language Chart
         </button>
         {isSpecialVisible && <Specialmovies onClose={closeSpecial} />}
 
       </section>
+        <Search />
     </section>
   );
 }

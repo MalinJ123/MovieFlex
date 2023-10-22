@@ -13,7 +13,7 @@ const Specialmovies = ({ onClose }) => {
           &times;
         </button>
         <p>Shows language in falling order</p>
-        <Pie data={pieConfig} />
+        <Pie className="piechart" data={pieConfig} />
       </div>
     </div>
   );

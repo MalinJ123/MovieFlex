@@ -47,6 +47,7 @@ function Search() {
           <div key={index} className="movie-card">
             <h2>{movie.Title}</h2>
             <p>Genre: {movie.Genre}</p>
+            <p>Premiere: {movie.Premiere}</p>
             <p>Runtime: {movie.Runtime}</p>
             <p>Language: {movie.Language}</p>
           </div>

@@ -34,7 +34,7 @@ const Premieremonth = ({ onClose }) => {
           &times;
         </button>
         <p>Shows New Premiere month</p>
-        <Bar data={data} />
+        <Bar className="chart" data={data} />
       </div>
     </div>
   );

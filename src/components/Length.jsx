@@ -11,13 +11,13 @@ const MovieLength = ({ onClose }) => {
 
   return (
     <>
-    <section className="chart">
+    <section className="overlay">
     <div className="chart-container">
     <button className="close-button" onClick={onClose}>
           &times; 
         </button>
     <p>Here is the length of the films in ascending order</p>
-      <Line data={config.data} options={config.options} />
+      <Line className="chart" data={config.data} options={config.options} />
       </div>
     </section>
     </>

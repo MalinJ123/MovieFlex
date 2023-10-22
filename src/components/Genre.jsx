@@ -32,7 +32,7 @@ import { getGenre } from "./../data/genre";
           &times; 
         </button>
         <p>Shows Genre</p>
-        <Pie data={genreConfig} />
+        <Pie className="piechart" data={genreConfig} />
       </div>
     </div>
   );
