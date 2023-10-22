@@ -11,8 +11,10 @@ const MovieLength = () => {
 
   return (
     <>
-      <p>Here is the length of the films in ascending order</p>
+    <section>
+    <p>Here is the length of the films in ascending order</p>
       <Line data={config.data} options={config.options} />
+    </section>
     </>
   );
 };

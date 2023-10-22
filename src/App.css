@@ -1,5 +1,125 @@
 * {
-    box-sizing: border-box;
-    margin: 0; 
-    padding: 0; 
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.chart {
+  width: 33em;
+  /* border: 2px solid black;  */
+  /* display: flex; */
+}
+
+.btn-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+button {
+    border: none;
+}
+
+button:hover {
+font-weight: bold;
+  transform: scale(1.2);
+}
+
+.genre-btn {
+  background-image: linear-gradient(
+    to right,
+    #ff00cc 0%,
+    #333399 51%,
+    #ff00cc 100%
+  );
+  margin: 10px;
+  padding: 15px 45px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+  display: block;
+}
+
+.genre-btn:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
+
+.length-btn {
+  background-image: linear-gradient(
+    to right,
+    #000046 0%,
+    #1cb5e0 51%,
+    #4d4a4a 100%
+  );
+  margin: 10px;
+  padding: 15px 45px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+  display: block;
+}
+
+.length-btn:hover {
+  background-position: right center;
+  color: #fff;
+  text-decoration: none;
+}
+
+.premiere-btn {
+  background-image: linear-gradient(
+    to right,
+    #000000 0%,
+    #0f9b0f 51%,
+    #4d4a4a 100%
+  );
+  margin: 10px;
+  padding: 15px 45px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+  display: block;
+}
+
+.premiere-btn:hover {
+  background-position: right center; 
+  color: #fff;
+  text-decoration: none;
+}
+
+.special-btn {
+  background-image: linear-gradient(
+    to right,
+    #ba8b02 0%,
+    #181818 51%,
+    #ba8b02 100%
+  );
+  margin: 10px;
+  padding: 15px 45px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+  display: block;
+}
+
+.special-btn:hover {
+  background-position: right center;
+  color: #fff;
+  text-decoration: none;
 }
