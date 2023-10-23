@@ -49,26 +49,26 @@ export function getGenre(sortOrder = "ascending") {
     categoryCounts[movie.Genre]++;
   });
 
-  // Sortera kategoridata baserat på sortOrder (om det behövs)
+  // Sortera kategoridata baserat på sortOrder 
   if (sortOrder === "ascending") {
-    // Sortera i stigande ordning (minsta först)
+  
     const sortedCategoryCounts = Object.entries(categoryCounts).sort(
       (a, b) => a[1] - b[1]
     );
     categoryCounts = Object.fromEntries(sortedCategoryCounts);
   } else if (sortOrder === "descending") {
-    // Sortera i fallande ordning (största först)
+
+ 
     const sortedCategoryCounts = Object.entries(categoryCounts).sort(
       (a, b) => b[1] - a[1]
     );
     categoryCounts = Object.fromEntries(sortedCategoryCounts);
   }
 
-  // Skapa cirkeldiagramkonfigurationen
+ 
   const labels = Object.keys(categoryCounts);
   const counts = Object.values(categoryCounts);
 
-  // Dina backgroundColors här
 
   const backgroundColors = [
     "rgba(139, 0, 139, 0.8)",

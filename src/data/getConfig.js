@@ -27,10 +27,9 @@ export function getConfig(sortOrder) {
     Portuguese: 0,
     Pashto: 0,
     Thai: 0,
-    // Add more languages as needed
   };
 
-  // Räkna språken för varje kategori
+  // Räkna språken för varje kategori Specials, Feature och Dokumentaries 
   data.Specials.forEach((movie) => {
     languageCounts[movie.Language]++;
   });
@@ -43,7 +42,7 @@ export function getConfig(sortOrder) {
     languageCounts[movie.Language]++;
   });
 
-  // Sortera språkdatan baserat på sortOrder
+  // Sortera språkdatan i fallande ordning
   const sortedCounts = Object.entries(languageCounts)
     .sort((a, b) => (sortOrder === "asc" ? a[1] - b[1] : b[1] - a[1]))
     .reduce((obj, [key, value]) => ({ ...obj, [key]: value }), {});

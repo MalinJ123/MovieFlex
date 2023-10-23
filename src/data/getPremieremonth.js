@@ -6,6 +6,7 @@ export function getPremieremonth() {
 
   useEffect(() => {
     const categories = ["Feature", "Specials", "Dokumentaries"];
+    
     const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
     const categoryData = {};
@@ -16,7 +17,7 @@ export function getPremieremonth() {
       });
     });
 
-    // Loopa igenom filmdata direkt från 'jsonData'.
+    // Loopar igenom filmdata direkt från jsonfilen.
     Object.keys(jsonData).forEach((category) => {
       jsonData[category].forEach((movie) => {
         const premiereMonth = movie.Premiere.split(" ")[0];

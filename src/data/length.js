@@ -12,11 +12,12 @@ export function getMovieLength() {
 
     const allMovies = [...jsonData.Specials, ...jsonData.Feature, ...jsonData.Dokumentaries];
 
-    // Extrahera runtimes från filmerna och sortera dem
+    // Plockar ut runtimes från filmerna och sortera dem i stigande ordning
     const runtimes = allMovies
       .map((movie) => movie.Runtime)
-      .sort((a, b) => {
-        // Anpassad sorteringsfunktion för runtime
+      .sort((b, a) => {
+
+        // Anpassad sorteringsfunktion för runtime. Delar upp "1" "h" "42" "min" 
         const aParts = a.split(' ');
         const bParts = b.split(' ');
 
