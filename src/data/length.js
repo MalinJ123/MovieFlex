@@ -45,7 +45,9 @@ export function getMovieLength() {
             bTotalMinutes += value;
           }
         }
-
+        if (a == "2 h 47 min"){
+          console.log("vad blev antal minuter", aTotalMinutes)
+        }
         return bTotalMinutes - aTotalMinutes;
       });
 
@@ -54,6 +56,8 @@ export function getMovieLength() {
       counts[runtime] = (counts[runtime] || 0) + 1;
       return counts;
     }, {});
+
+    console.log("runtime", runtimeCounts)
 
     setData({
       labels: runtimes, // Sorterade runtimes på X-axeln

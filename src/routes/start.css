@@ -118,7 +118,7 @@
 /* Dessa regler slås på när widthen är större än 1000 px = DATORSKärm */
 @media screen and (min-width: 320px) and (max-width: 900px) {
   .background {
-    background-image: url("../../public/splash2.jpg");
+    background-image: url("../../splash2.jpg");
     background-size: center;
     background-position: center;
     height: 30vh;

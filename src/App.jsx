@@ -65,7 +65,7 @@ function App() {
         {isSpecialVisible && <Specialmovies onClose={closeSpecial} />}
 
       </section>
-        {/* <Search /> */}
+        <Search />
     </section>
   );
 }
