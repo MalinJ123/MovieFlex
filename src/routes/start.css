@@ -32,8 +32,7 @@
 .movieflex:hover {
   animation: movieflex 4s ease-in-out;
   cursor: pointer;
-  /* border: 2px solid black; */
-  /* max-width: 5em; */
+ 
 }
 
 @keyframes movieflex {

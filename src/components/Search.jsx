@@ -49,14 +49,14 @@ function Search() {
           value={searchTerm}
           onChange={handleSearchChange}
         />
-      </div>
 
       {searchTerm.trim() === "" ? (
-        <p>No results</p>
-      ) : (
-        searchResult.map((movie, index) => (
-          <div key={index} className="movie-card">
-            <h2 onClick={() => handleMovieClick(index)}>{movie.Title}</h2>
+        <p></p>
+        ) : (
+          searchResult.map((movie, index) => (
+            <div className="card-container">
+            <div key={index} className="movie-card">
+            <h2  onClick={() => handleMovieClick(index)}>{movie.Title}</h2>
             {expandedMovie === index && (
               <div className="movie-details">
                 <p>Genre: {movie.Genre}</p>
@@ -66,8 +66,10 @@ function Search() {
               </div>
             )}
           </div>
+      </div>
         ))
-      )}
+        )}
+        </div>
     </div>
   );
 }

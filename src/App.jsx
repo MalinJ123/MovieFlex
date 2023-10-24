@@ -6,6 +6,8 @@ import MovieLength from "./components/length";
 import Genre from "./components/Genre";
 import Search from "./components/Search.jsx";
 import Start from "./routes/start";
+import { IconComponent } from "./routes/IconComponent";
+
 
 function App() {
   const [isGenreVisible, setIsGenreVisible] = useState(false);
@@ -60,12 +62,13 @@ function App() {
         {isPremiereVisible && <Premieremonth onClose={closePremiere} />}
 
         <button className="special-btn" onClick={toggleSpecial}>
-          Language Chart😊
+          Language Chart
         </button>
         {isSpecialVisible && <Specialmovies onClose={closeSpecial} />}
 
       </section>
         <Search />
+        <IconComponent/>
     </section>
   )
 }
