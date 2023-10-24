@@ -1,36 +1,104 @@
 /* Search.css */
 
-.input-container{
+.input-container {
   display: flex;
   justify-content: center;
-  background-color: rgb(146, 175, 175);
-  padding:0.3em;
+  /* background-color: rgb(146, 175, 175); */
+  padding: 0.3em;
+  background-color: rgba(88, 218, 62, 0.224);
 }
 
-.search-input{
+.input-container:hover {
+  animation-name: color;
+  animation-duration: 24s;
+  animation-iteration-count: infinite;
+}
+
+
+@keyframes color {
+  0% {
+    background-color: rgba(229, 215, 67, 0.517);
+  }
+  10% {
+    background-color: rgba(186, 186, 36, 0.33);
+  }
+  15% {
+    background-color: rgba(179, 209, 43, 0.462);
+  }
+  20% {
+    background-color: rgba(99, 218, 111, 0.515);
+  }
+  25% {
+    background-color: rgba(49, 183, 22, 0.643);
+  }
+  30% {
+    background-color: rgba(56, 217, 96, 0.38);
+  }
+  35% {
+    background-color: rgba(28, 179, 48, 0.381);
+  }
+  40% {
+    background-color: rgba(119, 217, 226, 0.502);
+  }
+  45% {
+    background-color: rgba(51, 172, 181, 0.778);
+  }
+  50% {
+    background-color: rgba(15, 94, 114, 0.721);
+  }
+  55% {
+    background-color: rgba(34, 80, 179, 0.351);
+  }
+  60% {
+    background-color: rgba(161, 137, 206, 0.564);
+  }
+  65% {
+    background-color: rgba(135, 99, 201, 0.514);
+  }
+  70% {
+    background-color: rgba(97, 68, 143, 0.56);
+  }
+  75% {
+    background-color: rgba(204, 131, 174, 0.596);
+  }
+  80% {
+    background-color: rgba(221, 166, 222, 0.5);
+  }
+  85% {
+    background-color: rgba(154, 82, 141, 0.433);
+  }
+  90% {
+    background-color: rgba(151, 66, 161, 0.462);
+  }
+  95% {
+    background-color: rgba(147, 23, 134, 0.44);
+  }
+  100% {
+    background-color: rgba(170, 45, 147, 0.464);
+  }
+}
+
+.search-input {
   border-radius: 10px;
   height: 2em;
-  margin:0.2em;
+  margin: 0.2em;
   padding-left: 0.3em;
-
 }
 
-
 .movie-card {
-    border: 1px solid #ccc;
-    padding: 10px;
-    margin: 10px;
-    background-color: #f9f9f9;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  .movie-card h2 {
-    font-size: 18px;
-    margin: 0;
-  }
-  
-  .movie-card p {
-    margin: 5px 0;
-  }
-  
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.movie-card h2 {
+  font-size: 18px;
+  margin: 0;
+}
+
+.movie-card p {
+  margin: 5px 0;
+}
