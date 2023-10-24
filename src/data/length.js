@@ -15,8 +15,7 @@ export function getMovieLength() {
     // Plockar ut runtimes från filmerna och sortera dem i stigande ordning
     const runtimes = allMovies
       .map((movie) => movie.Runtime)
-      .sort((b, a) => {
-
+      .sort((a, b) => {
         // Anpassad sorteringsfunktion för runtime. Delar upp "1" "h" "42" "min" 
         const aParts = a.split(' ');
         const bParts = b.split(' ');
@@ -45,33 +44,70 @@ export function getMovieLength() {
             bTotalMinutes += value;
           }
         }
-        if (a == "2 h 47 min"){
-          console.log("vad blev antal minuter", aTotalMinutes)
-        }
-        return bTotalMinutes - aTotalMinutes;
+
+        return aTotalMinutes - bTotalMinutes;
       });
 
-    // Räkna antal filmer per runtime
+    // Skapa en ny array med objekt för att lagra runtime och antal filmer
     const runtimeCounts = runtimes.reduce((counts, runtime) => {
       counts[runtime] = (counts[runtime] || 0) + 1;
       return counts;
     }, {});
 
-    console.log("runtime", runtimeCounts)
+    const runtimeCountsArray = Object.entries(runtimeCounts).map(([runtime, count]) => ({
+      runtime,
+      count,
+    }));
 
+    // Sortera runtimeCountsArray efter kortast tid till längst tid
+    runtimeCountsArray.sort((a, b) => {
+      // Omvandla runtimes till minuter för jämförelse
+      const aParts = a.runtime.split(' ');
+      const bParts = b.runtime.split(' ');
+
+      let aTotalMinutes = 0;
+      let bTotalMinutes = 0;
+
+      for (let i = 0; i < aParts.length; i += 2) {
+        const value = parseInt(aParts[i]);
+        const unit = aParts[i + 1];
+
+        if (unit === 'h') {
+          aTotalMinutes += value * 60;
+        } else if (unit === 'min') {
+          aTotalMinutes += value;
+        }
+      }
+
+      for (let i = 0; i < bParts.length; i += 2) {
+        const value = parseInt(bParts[i]);
+        const unit = bParts[i + 1];
+
+        if (unit === 'h') {
+          bTotalMinutes += value * 60;
+        } else if (unit === 'min') {
+          bTotalMinutes += value;
+        }
+      }
+
+      return aTotalMinutes - bTotalMinutes;
+    });
+
+    // Uppdatera data och runtimeCounts
     setData({
-      labels: runtimes, // Sorterade runtimes på X-axeln
+      labels: runtimeCountsArray.map((item) => item.runtime), 
       datasets: [
         {
           label: "Number of Movies",
-          data: Object.values(runtimeCounts), // Antal filmer på Y-axeln
+          data: runtimeCountsArray.map((item) => item.count), 
           borderColor: "rgba(75, 192, 192, 1)",
           borderWidth: 2,
         },
       ],
     });
 
-    setRuntimes(runtimes);
+    setRuntimes(runtimeCountsArray);
+
   }, []);
 
   const config = {
@@ -95,7 +131,7 @@ export function getMovieLength() {
         y: {
           title: {
             display: true,
-            text: 'Number of Movies',
+            text: 'Quantity',
           },
         },
       },
