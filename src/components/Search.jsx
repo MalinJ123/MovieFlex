@@ -32,13 +32,15 @@ function Search() {
 
   return (
     <div>
-      <h3>Search function</h3>
-      <input
-        type="text"
-        placeholder="Search by Title"
-        value={searchTerm}
-        onChange={handleSearchChange}
-      />
+      <div className="input-container">
+          <input className="search-input"
+            type="text"
+            placeholder="Search by Title"
+            value={searchTerm}
+            onChange={handleSearchChange}
+          />
+        
+      </div>
 
       {searchTerm.trim() === "" ? (
         <p>No results</p>

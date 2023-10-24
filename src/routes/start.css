@@ -12,7 +12,6 @@
 .ad {
   color: rgb(255, 255, 255);
   opacity: 0;
- 
 }
 .advertisment {
   display: flex;
@@ -25,7 +24,7 @@
 .movieflex {
   font-family: "Shadows Into Light", cursive;
   font-size: 30px;
-  margin-top: 5.9em;
+  margin-top: 3.9em;
   color: rgb(0, 0, 0);
   position: relative;
 }
@@ -47,7 +46,7 @@
   font-family: "Nosifer", sans-serif;
   font-size: 50px;
   margin-top: 2.2em;
-  
+
   animation: slide-in 3s ease-in-out forwards;
   transform: translateX(-50%);
 }
@@ -86,37 +85,17 @@
   }
 }
 
-
-
-/* Skärm som är mindre än 325px */
-@media screen and (max-width: 325px) {
-  .background {
-    background-image: url("../../splash3.jpg");
-    background-size: cover;
-    background-position: center;
-    height: 30vh;
-  }
-  .ad {
-    color: rgb(255, 255, 255);
-  }
-  .movieflex {
-    font-family: "Shadows Into Light", cursive;
-    font-size: 20px;
-    margin-top: 3.4em;
-  }
-
-  .new {
-    font-family: "Nosifer", sans-serif;
-    font-size: 30px;
-    margin-top: 3.2em;
-  }
-
-  .year {
-    font-family: "Pixelify Sans", sans-serif;
-  }
+button {
+  border: none;
 }
-/* Dessa regler slås på när widthen är större än 1000 px = DATORSKärm */
-@media screen and (min-width: 320px) and (max-width: 900px) {
+
+button:hover {
+  font-weight: bold;
+  transform: scale(1.2);
+}
+
+/* Mellan en skärmbredd på 329 - 900px */
+@media screen and (min-width: 329px) and (max-width: 900px) {
   .background {
     background-image: url("../../splash2.jpg");
     background-size: center;
@@ -132,12 +111,70 @@
   .ad {
     margin-left: 10px;
     color: rgb(8, 8, 8);
-    /* border: 2px solid black;  */
     display: flex;
+  }
+  .movieflex {
+    display: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .genre-btn,
+  .special-btn,
+  .length-btn,
+  .premiere-btn {
+    padding: 1em;
+    margin: 0.1em;
+  }
+}
+
+@media screen and (min-width: 330px) and (max-width: 415px) {
+  .genre-btn,
+  .special-btn,
+  .length-btn,
+  .premiere-btn {
+    padding: 0.6em;
+    margin: 0.1em;
+  }
+}
+/* Skärm som är mindre än 325px */
+@media screen and (max-width: 328px) {
+  .background {
+    background-image: url("../../splash3.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 30vh;
+  }
+  .ad {
+    color: rgb(255, 255, 255);
   }
   .movieflex {
     font-family: "Shadows Into Light", cursive;
     font-size: 20px;
-    margin-top: 0.9em;
+    margin-top: 1.4em;
+  }
+
+  .new {
+    font-family: "Nosifer", sans-serif;
+    font-size: 30px;
+    margin-top: 3.2em;
+  }
+
+  .year {
+    font-family: "Pixelify Sans", sans-serif;
+  }
+  .genre-btn,
+  .special-btn,
+  .length-btn,
+  .premiere-btn {
+    padding: 0.6em;
+    margin: 0.1em;
+  }
+  .genre-btn:hover,
+  .special-btn:hover,
+  .length-btn:hover,
+  .premiere-btn:hover {
+    font-weight: lighter;
+    transform: scale(1);
   }
 }

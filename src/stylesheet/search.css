@@ -1,4 +1,21 @@
 /* Search.css */
+
+.input-container{
+  display: flex;
+  justify-content: center;
+  background-color: rgb(146, 175, 175);
+  padding:0.3em;
+}
+
+.search-input{
+  border-radius: 10px;
+  height: 2em;
+  margin:0.2em;
+  padding-left: 0.3em;
+
+}
+
+
 .movie-card {
     border: 1px solid #ccc;
     padding: 10px;

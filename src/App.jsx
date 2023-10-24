@@ -45,29 +45,29 @@ function App() {
      
       <section className="btn-container">
         <button className="genre-btn" onClick={toggleGenre}>
-          Show Genre Chart
+          Genre Chart
         </button>
         {isGenreVisible && <Genre onClose={closeGenre} />}
 
         <button className="length-btn" onClick={toggleLength}>
-          Show Length Chart
+          Length Chart
         </button>
         {isLengthVisible && <MovieLength onClose={closeLength} />}
 
         <button className="premiere-btn" onClick={togglePremiere}>
-          Show Premiere Chart
+          Premiere Chart
         </button>
         {isPremiereVisible && <Premieremonth onClose={closePremiere} />}
 
         <button className="special-btn" onClick={toggleSpecial}>
-          Show Language Chart
+          Language Chart😊
         </button>
         {isSpecialVisible && <Specialmovies onClose={closeSpecial} />}
 
       </section>
         <Search />
     </section>
-  );
+  )
 }
 
 export default App;

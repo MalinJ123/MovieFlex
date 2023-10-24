@@ -6,14 +6,13 @@
 
 .chart {
   width: 40em;
-  /* border: 2px solid black;  */
   display: flex;
   justify-self: center;
   
 }
 
 .piechart{
-  width: 50em;
+  width: 30em;
 }
 
 .btn-container {
@@ -23,12 +22,17 @@
 
 button {
     border: none;
+    transition: transform 0.5s, box-shadow 0.4s;
 }
 
 button:hover {
 font-weight: bold;
   transform: scale(1.2);
+  box-shadow: 0em 0.5em 0.2em 0em rgb(159, 155, 155);
+  transform: translateY(-50px);
+  position: relative;
 }
+
 
 .genre-btn {
   background-image: linear-gradient(
@@ -47,6 +51,7 @@ font-weight: bold;
   box-shadow: 0 0 20px #eee;
   border-radius: 10px;
   display: block;
+  
 }
 
 .genre-btn:hover {
