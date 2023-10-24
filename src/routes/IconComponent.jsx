@@ -18,7 +18,7 @@ export function IconComponent() {
     return (
         <div
             style={{
-                display: "grid",
+                display: "Grid",
                 gridTemplateColumns: "auto auto",
                 gridGap: 10
             }}
@@ -29,10 +29,11 @@ export function IconComponent() {
                         width: 75,
                         height: 75,
                         borderRadius: 20,
-                        backgroundColor: colors[item - 1]
+                        backgroundColor: colors[item -1]
                     }}
                     key={item}
                     layout
+                    whileHover={{ rotate: 0, scale: 1.2 }}
                     transition={{ type: "spring", stiffness: 350, damping: 25 }}
                 />
             ))}
