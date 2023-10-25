@@ -18,7 +18,7 @@ export function IconComponent() {
     return (
         <div
             style={{
-                display: "Grid",
+                display: "flex",
                 gridTemplateColumns: "auto auto",
                 gridGap: 10
             }}

@@ -29,7 +29,7 @@ export function getConfig(sortOrder) {
     Thai: 0,
   };
 
-  // Räkna språken för varje kategori Specials, Feature och Dokumentaries 
+  // Räkna språken för varje kategori i Specials, Feature och Dokumentaries 
   data.Specials.forEach((movie) => {
     languageCounts[movie.Language]++;
   });
@@ -57,24 +57,11 @@ export function getConfig(sortOrder) {
         label: "Language Counts",
         data: counts,
         backgroundColor: [
-          "rgba(0, 255, 0, 0.8)",
-          "rgba(0, 0, 255, 0.8)",
-          "rgba(255, 0, 0, 0.8)",
-          "rgba(255, 255, 0, 0.8)",
-          "rgba(255, 0, 255, 0.8)",
-          "rgba(0, 255, 255, 0.8)",
-          "rgba(255, 165, 0, 0.8)",
-          "rgba(128, 0, 128, 0.8)",
-          "rgba(255, 192, 203, 0.8)",
-          "rgba(255, 215, 0, 0.8)",
-          "rgba(0, 128, 0, 0.8)",
-          "rgba(255, 69, 0, 0.8)",
-          "rgba(255, 0, 128, 0.8)",
-          "rgba(0, 255, 128, 0.8)",
-          "rgba(128, 128, 0, 0.8)",
-          "rgba(128, 0, 0, 0.8)",
+          "rgba(255, 206, 86, 0.8)",
+          "rgba(54, 162, 235, 0.8)",
+          "rgba(255, 99, 132, 0.8)",
         ],
-        borderColor: "rgba(0, 0, 0, 0.5)",
+        borderColor: "rgba(0, 0, 0, 0.09)",
       },
     ],
   };

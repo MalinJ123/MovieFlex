@@ -6,7 +6,7 @@ import MovieLength from "./components/length";
 import Genre from "./components/Genre";
 import Search from "./components/Search.jsx";
 import Start from "./routes/start";
-import { IconComponent } from "./routes/IconComponent";
+import Footer from "./routes/Footer"
 
 
 function App() {
@@ -68,7 +68,7 @@ function App() {
 
       </section>
         <Search />
-        <IconComponent/>
+        {/* <Footer/> */}
     </section>
   )
 }

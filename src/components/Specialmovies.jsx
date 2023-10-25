@@ -10,9 +10,9 @@ const Specialmovies = ({ onClose }) => {
     <div className="overlay">
       <div className="chart-container">
         <button className="close-button" onClick={onClose}>
-          &times;
+        ✖️
         </button>
-        <p>Shows language in falling order</p>
+        <p className="chart-p" >Shows language in falling order</p>
         <Pie className="piechart" data={pieConfig} />
       </div>
     </div>

@@ -17,7 +17,7 @@ export function getPremieremonth() {
       });
     });
 
-    // Loopar igenom filmdata direkt från jsonfilen.
+    // Loopar igenom filmdatan direkt från jsonfilen.
     Object.keys(jsonData).forEach((category) => {
       jsonData[category].forEach((movie) => {
         const premiereMonth = movie.Premiere.split(" ")[0];

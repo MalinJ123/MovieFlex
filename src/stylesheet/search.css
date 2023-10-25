@@ -5,13 +5,14 @@
   /* background-color: rgba(88, 218, 62, 0.224); */
   margin-top: 1em;
   margin-bottom: 2em;
+  min-height: calc(100vh - 80px);
 }
 
 /* .input-container:hover {
   animation-name: color;
-  animation-duration: 24s;
+  animation-duration: 10s;
   animation-iteration-count: infinite;
-} */
+}  */
 
 @keyframes color {
   0% {
@@ -83,6 +84,8 @@
   padding-left: 0.3em;
   width: 14em;
 }
+
+
 .card-container {
   position: relative;
   opacity: 1;

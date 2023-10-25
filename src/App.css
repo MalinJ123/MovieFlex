@@ -8,10 +8,19 @@
   width: 40em;
   display: flex;
   justify-self: center;
-  
+  animation: squeezeAndSquash 5s ease;
 }
 
-.piechart{
+@keyframes squeezeAndSquash {
+  0% {
+    transform: scaleX(0.1) scaleY(0.1);
+  }
+  100% {
+    transform: scaleX(1) scaleY(1);
+  }
+}
+
+.piechart {
   width: 30em;
 }
 
@@ -21,18 +30,17 @@
 }
 
 button {
-    border: none;
-    transition: transform 0.5s, box-shadow 0.4s;
+  border: none;
+  transition: transform 0.5s, box-shadow 0.4s;
 }
 
 button:hover {
-font-weight: bold;
+  font-weight: bold;
   transform: scale(1.2);
   box-shadow: 0em 0.5em 0.2em 0em rgb(159, 155, 155);
   transform: translateY(-50px);
   position: relative;
 }
-
 
 .genre-btn {
   background-image: linear-gradient(
@@ -51,11 +59,10 @@ font-weight: bold;
   box-shadow: 0 0 20px #eee;
   border-radius: 10px;
   display: block;
-  
 }
 
 .genre-btn:hover {
-  background-position: right center; /* change the direction of the change here */
+  background-position: right center;
   color: #fff;
   text-decoration: none;
 }
@@ -105,7 +112,7 @@ font-weight: bold;
 }
 
 .premiere-btn:hover {
-  background-position: right center; 
+  background-position: right center;
   color: #fff;
   text-decoration: none;
 }
@@ -134,12 +141,19 @@ font-weight: bold;
   color: #fff;
   text-decoration: none;
 }
-
-.close-button{
-
+.chart-p {
+  /* font-family: "Shadows Into Light", cursive; */
+  /* font-family: "Nosifer", sans-serif; */
+  /* font-family: "Pixelify Sans", sans-serif; */
+  font-family: 'Playpen Sans', cursive;
   font-size: 1.5em;
-display: flex;
+  margin-bottom:1em;
+}
 
+.close-button {
+  font-size: 1em;
+  margin-bottom: 1em;
+  border-radius: 10px;
 }
 .overlay {
   position: fixed;
@@ -147,11 +161,12 @@ display: flex;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5); 
+  background: rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 100; 
+  z-index: 100;
+  /* border: 2px solid hotpink; */
 }
 
 .chart-container {
@@ -161,6 +176,3 @@ display: flex;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   text-align: center;
 }
-
-
-

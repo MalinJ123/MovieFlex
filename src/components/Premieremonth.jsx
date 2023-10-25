@@ -31,9 +31,9 @@ const Premieremonth = ({ onClose }) => {
     <div className="overlay">
       <div className="chart-container">
         <button className="close-button" onClick={onClose}>
-          &times;
+        ✖️
         </button>
-        <p>Premiere month for new movies 2022</p>
+        <p className="chart-p">Premiere month for new movies 2022</p>
         <Bar className="chart" data={data} />
       </div>
     </div>
