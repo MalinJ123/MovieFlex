@@ -51,16 +51,17 @@ function App() {
         </button>
         {isGenreVisible && <Genre onClose={closeGenre} />}
 
-        <button className="length-btn" onClick={toggleLength}>
-          Length Chart
-        </button>
-        {isLengthVisible && <MovieLength onClose={closeLength} />}
 
         <button className="premiere-btn" onClick={togglePremiere}>
           Premiere Chart
         </button>
         {isPremiereVisible && <Premieremonth onClose={closePremiere} />}
 
+        <button className="length-btn" onClick={toggleLength}>
+          Length Chart
+        </button>
+        {isLengthVisible && <MovieLength onClose={closeLength} />}
+        
         <button className="special-btn" onClick={toggleSpecial}>
           Language Chart
         </button>

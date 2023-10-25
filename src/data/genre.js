@@ -91,32 +91,23 @@ export function getGenre(sortOrder = "ascending") {
   const counts = Object.values(categoryCounts);
 
   const backgroundColors = [
-    "rgba(139, 0, 139, 0.8)", 
-    "rgba(255, 69, 0, 0.8)",  
-    "rgba(0, 0, 139, 0.8)",   
-    "rgba(0, 100, 0, 0.8)",   
-    "rgba(0, 139, 139, 0.8)", 
-    "rgba(139, 0, 0, 0.8)",  
-    "rgba(128, 128, 0, 0.8)", 
-    "rgba(0, 0, 0, 0.8)",    
-    "rgba(139, 0, 139, 0.8)", 
-    "rgba(255, 140, 0, 0.8)", 
-    "rgba(0, 0, 255, 0.8)",   
-    "rgba(0, 100, 0, 0.8)",   
-    "rgba(0, 128, 128, 0.8)", 
-    "rgba(128, 0, 0, 0.8)",   
-    "rgba(128, 128, 0, 0.8)", 
-    "rgba(0, 0, 0, 0.8)",     
-    "rgba(128, 0, 128, 0.8)", 
-    "rgba(255, 165, 0, 0.8)", 
-    "rgba(0, 0, 128, 0.8)",   
-    "rgba(0, 128, 0, 0.8)", 
-    "rgba(0, 128, 128, 0.8)", 
-    "rgba(139, 69, 19, 0.8)", 
-    "rgba(105, 105, 105, 0.8)", 
-    "rgba(128, 0, 128, 0.8)",
-    "rgba(0, 128, 0, 0.8)" ,
-  ];
+
+    "rgba(160, 120, 160, 0.5)", //mörk lila
+
+    "rgba(200, 162, 200, 0.5)", //pastell lila
+    "rgba(255, 160, 180, 0.5)", //mörk rosa
+
+ 
+
+    "rgba(255, 182, 193, 0.5)", //rosa 
+
+
+    "rgba(173, 220, 230, 0.5)", //ljusblå
+    
+    "rgba(173, 210, 230, 0.5)", //ljusblå
+    "rgba(135, 200, 235, 0.5)", // mörkare ljusblå
+    
+     ];
 
 
   return {

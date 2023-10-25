@@ -8,10 +8,10 @@
   width: 40em;
   display: flex;
   justify-self: center;
-  animation: squeezeAndSquash 5s ease;
+  animation: slowForward 5s ease;
 }
 
-@keyframes squeezeAndSquash {
+@keyframes slowForward {
   0% {
     transform: scaleX(0.1) scaleY(0.1);
   }
@@ -22,7 +22,18 @@
 
 .piechart {
   width: 30em;
+  animation: rotateChart 3s linear; 
 }
+
+@keyframes rotateChart {
+  0% {
+    transform: scaleX(0.1) scaleY(0.1) rotate(0); 
+  }
+  100% {
+    transform: scaleX(1) scaleY(1) rotate(360deg); 
+  }
+}
+
 
 .btn-container {
   display: flex;
