@@ -153,9 +153,6 @@ button:hover {
   text-decoration: none;
 }
 .chart-p {
-  /* font-family: "Shadows Into Light", cursive; */
-  /* font-family: "Nosifer", sans-serif; */
-  /* font-family: "Pixelify Sans", sans-serif; */
   font-family: 'Playpen Sans', cursive;
   font-size: 1.5em;
   margin-bottom:1em;
@@ -177,7 +174,6 @@ button:hover {
   justify-content: center;
   align-items: center;
   z-index: 100;
-  /* border: 2px solid hotpink; */
 }
 
 .chart-container {
@@ -186,4 +182,12 @@ button:hover {
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   text-align: center;
+
+}
+
+.genre-btn,
+.special-btn,
+.length-btn,
+.premiere-btn {
+  margin:2em 0 2em;
 }

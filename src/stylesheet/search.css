@@ -1,18 +1,15 @@
 .input-container {
+  padding-top: 4em;
+  background-color: rgba(213, 221, 212, 0.582);
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  padding: 0.3em;
-  /* background-color: rgba(88, 218, 62, 0.224); */
-  margin-top: 1em;
-  margin-bottom: 2em;
-  min-height: calc(100vh - 80px);
 }
-
 /* .input-container:hover {
   animation-name: color;
   animation-duration: 10s;
   animation-iteration-count: infinite;
-}  */
+}  
 
 @keyframes color {
   0% {
@@ -75,16 +72,19 @@
   100% {
     background-color: rgba(170, 45, 147, 0.464);
   }
-}
+}  */
 
+.input-to-center {
+  display: flex;
+  justify-content: center;
+}
 .search-input {
-  border-radius: 10px;
+  border-radius: 5px;
   height: 2em;
-  margin: 0.2em;
-  padding-left: 0.3em;
-  width: 14em;
+  margin-bottom:5em;
+  padding:1.5em 1em;
+  width: 80%;
 }
-
 
 .card-container {
   position: relative;
@@ -119,7 +119,7 @@
   border: 1px solid #ccc;
   padding: 0.5em;
   margin: 0.5em;
-  background-color: #f9f9f9;
+  background-color: #ffffff;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   width: 60%;
@@ -156,5 +156,5 @@
   font-family: "Pixelify Sans", sans-serif;
 }
 .movie-card p {
-  margin: 5px 0;
+  margin: 5px ;
 }

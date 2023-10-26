@@ -6,8 +6,7 @@ import MovieLength from "./components/length";
 import Genre from "./components/Genre";
 import Search from "./components/Search.jsx";
 import Start from "./routes/start";
-import Footer from "./routes/Footer"
-
+import { IconComponent } from './routes/IconComponent';
 
 function App() {
   const [isGenreVisible, setIsGenreVisible] = useState(false);
@@ -69,7 +68,7 @@ function App() {
 
       </section>
         <Search />
-        {/* <Footer/> */}
+        {/* <IconComponent/>  */}
     </section>
   )
 }

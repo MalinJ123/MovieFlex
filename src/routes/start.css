@@ -1,8 +1,3 @@
-/* font-family: 'Shadows Into Light', cursive; Kursive movieflex font 
- bloody 
-
-*/
-
 .background {
   background-image: url("../../splash3.jpg");
   background-size: center;
@@ -27,19 +22,31 @@
   margin-top: 3.9em;
   color: rgb(0, 0, 0);
   position: relative;
+  animation: title-slide-down 3.5s ease-in-out forwards;
 }
-
-.movieflex:hover {
-  animation: movieflex 4s ease-in-out;
-  cursor: pointer;
- 
-}
-
-@keyframes movieflex {
+@keyframes title-slide-down {
   0% {
-    transform: translate(0, 0) rotate(360deg) scale(1.2);
+    opacity: 0;
+    transform: translateY(-100%) scale(0.5);
+  }
+  30% {
+    opacity: 1;
+    transform: translateY(0) scale(1.5);
+  }
+  70% {
+    opacity: 1;
+    transform: translateY(0) scale(1.5);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
   }
 }
+.movieflex:hover {
+  cursor: pointer;
+}
+
+
 
 .new {
   font-family: "Nosifer", sans-serif;
@@ -48,12 +55,6 @@
 
   animation: slide-in 3s ease-in-out forwards;
   transform: translateX(-50%);
-}
-
-.year {
-  font-family: "Pixelify Sans", sans-serif;
-  animation: slide 3.5s ease-in-out forwards;
-  transform: translateX(50%);
 }
 @keyframes slide-in {
   0% {
@@ -69,6 +70,12 @@
     transform: translateX(0);
   }
 }
+.year {
+  font-family: "Pixelify Sans", sans-serif;
+  animation: slide 3.5s ease-in-out forwards;
+  transform: translateX(50%);
+}
+
 @keyframes slide {
   0% {
     opacity: 0;
@@ -123,7 +130,7 @@ button:hover {
   .length-btn,
   .premiere-btn {
     padding: 1em;
-    margin: 0.1em;
+    margin: 2.1em;
   }
 }
 
@@ -132,8 +139,7 @@ button:hover {
   .special-btn,
   .length-btn,
   .premiere-btn {
-    padding: 0.6em;
-    margin: 0.1em;
+    font-size: 10px;
   }
 }
 /* Skärm som är mindre än 325px */
@@ -168,6 +174,8 @@ button:hover {
   .premiere-btn {
     padding: 0.6em;
     margin: 0.1em;
+    font-size: 10px;
+    
   }
   .genre-btn:hover,
   .special-btn:hover,
@@ -175,5 +183,34 @@ button:hover {
   .premiere-btn:hover {
     font-weight: lighter;
     transform: scale(1);
+  }
+  .movie-card h2 {
+    font-size: 14px;
+    font-family: "Pixelify Sans", sans-serif;
+  }
+  .movie-card p {
+    margin: 2px;
+  }
+
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+
+  .chart-container {
+    width: 100%;
+    height: 100%;
+  }
+
+  .chart-p {
+    font-family: "Playpen Sans", cursive;
+    font-size: 10px;
+  }
+
+  .chart {
+    transform: rotate(90deg);
+    width: 100%;
+    height: 100%;
   }
 }

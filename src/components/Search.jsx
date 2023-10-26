@@ -40,36 +40,38 @@ function Search() {
   };
 
   return (
-    <div>
+    <div className="cont">
       <div className="input-container">
-        <input
-          className="search-input"
-          type="text"
-          placeholder="Search by Title"
-          value={searchTerm}
-          onChange={handleSearchChange}
-        />
+        <div className="input-to-center">
+          <input
+            className="search-input"
+            type="text"
+            placeholder="Search movie by title"
+            value={searchTerm}
+            onChange={handleSearchChange}
+          />
+        </div>
 
-      {searchTerm.trim() === "" ? (
-        <p></p>
+        {searchTerm.trim() === "" ? (
+          <p></p>
         ) : (
           searchResult.map((movie, index) => (
             <div className="card-container">
-            <div key={index} className="movie-card">
-            <h2  onClick={() => handleMovieClick(index)}>{movie.Title}</h2>
-            {expandedMovie === index && (
-              <div className="movie-details">
-                <p>Genre: {movie.Genre}</p>
-                <p>Premiere: {movie.Premiere}</p>
-                <p>Runtime: {movie.Runtime}</p>
-                <p>Language: {movie.Language}</p>
+              <div key={index} className="movie-card">
+                <h2 onClick={() => handleMovieClick(index)}>{movie.Title}</h2>
+                {expandedMovie === index && (
+                  <div className="movie-details">
+                    <p>Genre: {movie.Genre}</p>
+                    <p>Premiere: {movie.Premiere}</p>
+                    <p>Runtime: {movie.Runtime}</p>
+                    <p>Language: {movie.Language}</p>
+                  </div>
+                )}
               </div>
-            )}
-          </div>
-      </div>
-        ))
+            </div>
+          ))
         )}
-        </div>
+      </div>
     </div>
   );
 }
