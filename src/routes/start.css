@@ -1,5 +1,5 @@
 .background {
-  background-image: url("../../splash3.jpg");
+  background-image: url("../../public/images/splash3.jpg");
   background-size: center;
   background-position: center;
   height: 50vh;
@@ -45,8 +45,6 @@
 .movieflex:hover {
   cursor: pointer;
 }
-
-
 
 .new {
   font-family: "Nosifer", sans-serif;
@@ -101,9 +99,10 @@ button:hover {
 }
 
 /* Mellan en skärmbredd på 329 - 900px */
-@media screen and (min-width: 329px) and (max-width: 900px) {
+@media screen and (min-width: 329px) and (max-width: 900px) 
+{
   .background {
-    background-image: url("../../splash2.jpg");
+    background-image: url("../../public/images/splash2.jpg");
     background-size: center;
     background-position: center;
     height: 30vh;
@@ -145,7 +144,7 @@ button:hover {
 /* Skärm som är mindre än 325px */
 @media screen and (max-width: 328px) {
   .background {
-    background-image: url("../../splash3.jpg");
+    background-image: url("../../public/images/splash3.jpg");
     background-size: cover;
     background-position: center;
     height: 30vh;
@@ -175,7 +174,6 @@ button:hover {
     padding: 0.6em;
     margin: 0.1em;
     font-size: 10px;
-    
   }
   .genre-btn:hover,
   .special-btn:hover,
