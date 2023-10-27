@@ -156,6 +156,11 @@ button:hover {
   font-family: 'Playpen Sans', cursive;
   font-size: 1.5em;
   margin-bottom:1em;
+  transition: transform .25s ease-in-out;
+}
+
+.chart-p:hover{
+  transform: scaleX(0.75) scaleY(1.75);
 }
 
 .close-button {
