@@ -8,6 +8,9 @@ import Search from "./components/Search.jsx";
 import Start from "./routes/start";
 import { IconComponent } from './routes/IconComponent';
 
+
+
+
 function App() {
   const [isGenreVisible, setIsGenreVisible] = useState(false);
   const [isLengthVisible, setIsLengthVisible] = useState(false);

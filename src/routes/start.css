@@ -16,78 +16,6 @@
   position: relative;
 }
 
-.movieflex {
-  font-family: "Shadows Into Light", cursive;
-  font-size: 30px;
-  margin-top: 3.9em;
-  color: rgb(0, 0, 0);
-  position: relative;
-  animation: title-slide-down 3.5s ease-in-out forwards;
-}
-@keyframes title-slide-down {
-  0% {
-    opacity: 0;
-    transform: translateY(-100%) scale(0.5);
-  }
-  30% {
-    opacity: 1;
-    transform: translateY(0) scale(1.5);
-  }
-  70% {
-    opacity: 1;
-    transform: translateY(0) scale(1.5);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
-}
-.movieflex:hover {
-  cursor: pointer;
-}
-
-.new {
-  font-family: "Nosifer", sans-serif;
-  font-size: 50px;
-  margin-top: 2.2em;
-
-  animation: slide-in 3s ease-in-out forwards;
-  transform: translateX(-50%);
-}
-@keyframes slide-in {
-  0% {
-    opacity: 0;
-    transform: translateX(-50%);
-  }
-  50% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-.year {
-  font-family: "Pixelify Sans", sans-serif;
-  animation: slide 3.5s ease-in-out forwards;
-  transform: translateX(50%);
-}
-
-@keyframes slide {
-  0% {
-    opacity: 0;
-    transform: translateX(50%);
-  }
-  50% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
 
 button {
   border: none;
@@ -153,19 +81,19 @@ button:hover {
     color: rgb(255, 255, 255);
   }
   .movieflex {
-    font-family: "Shadows Into Light", cursive;
-    font-size: 20px;
-    margin-top: 1.4em;
+display: none;
   }
 
   .new {
     font-family: "Nosifer", sans-serif;
-    font-size: 30px;
+   color:rgb(148, 138, 138);
     margin-top: 3.2em;
   }
 
   .year {
     font-family: "Pixelify Sans", sans-serif;
+    font-size: 30px;
+    color:rgb(124, 107, 107);
   }
   .genre-btn,
   .special-btn,

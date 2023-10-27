@@ -10,6 +10,8 @@ function Search() {
   const [searchResult, setSearchResult] = useState([]);
   const [expandedMovie, setExpandedMovie] = useState(null);
 
+  
+
   const handleSearchChange = (e) => {
     const newSearchTerm = e.target.value;
     setSearchTerm(newSearchTerm);
